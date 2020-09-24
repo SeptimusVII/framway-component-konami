@@ -1,1 +1,29 @@
-<div class="konami"></div>
+<div class="d-grid cols-3">
+	<div class="img-container r_1-1"><img src="https://picsum.photos/300/300" alt="sample image"></div>
+	<div class="img-container r_1-1"><img src="https://picsum.photos/300/300" alt="sample image"></div>
+	<div class="img-container r_1-1"><img src="https://picsum.photos/300/300" alt="sample image"></div>
+</div>
+
+<script>
+	var arrKonami = [
+		'https://www.webexmachina.fr/files/medias/konami/aaaaaah.png',
+		'https://www.webexmachina.fr/files/medias/konami/Detective-Julien.png',
+		'https://www.webexmachina.fr/files/medias/konami/manchots.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/mega-krulien.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/morganfreepoulpe.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/myah.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/pingouins.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/proue.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/casul.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/goldblum.jpg',
+		'https://www.webexmachina.fr/files/medias/konami/jamy.jpg',
+	];
+	new app.Konami({
+	    code : function(){
+	      	$('img').each(function(){
+	    		var i = Math.floor(Math.random()*arrKonami.length);
+	      		$(this).replaceWith('<img src="'+arrKonami[i]+'" alt="" />')
+	      	});
+	    }
+	});
+</script>
